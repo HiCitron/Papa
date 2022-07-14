@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    </head>
+    <body id="body" style="height:100vh">
+        <section id="section" class="text-white bg-gray-900" style="height:100vh">
+            <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
+              <div class="max-w-lg mx-auto text-center">
+                <h2 class="text-3xl font-bold sm:text-4xl">Bon Anniversaire Papa!</h2>
+          
+                <p class="mt-4 text-gray-300">
+                  Pour ton cadeau, je t'ai preparé une petite devinette
+                </p>
+              </div>
+          
+              <div class="grid grid-cols-1 gap-8 mt-8 md:grid-cols-2 lg:grid-cols-3">
+                <a class="block p-8 transition border border-gray-800 shadow-xl rounded-xl hover:shadow-pink-500/10 hover:border-pink-500/10" href="#">
+                    <div class="w-full h-48"><img src="https://providenceintl.org/wp-content/uploads/2020/12/nature.jpg" class="w-full h-full object-cover"/></div>
+                  <h3 class="mt-4 text-xl font-bold text-white">Le parc National de la Mauricie</h3>
+                </a>
+
+                <a class="block p-8 transition border border-gray-800 shadow-xl rounded-xl hover:shadow-pink-500/10 hover:border-pink-500/10" href="#">
+                    <div class="w-full h-48"><img src="https://external-preview.redd.it/wxttMjfwGtG9S1sAEgTi9kZo7V6rsv_mqw0bFfPzQeo.jpg?auto=webp&s=9b7ce2579d339f293cb23935357f93b3bb0eaab7" class="w-full h-full object-cover"/></div>
+                  <h3 class="mt-4 text-xl font-bold text-white">Un lac calme</h3>
+                </a>
+
+                <a class="block p-8 transition border border-gray-800 shadow-xl rounded-xl hover:shadow-pink-500/10 hover:border-pink-500/10" href="#">
+                    <div class="w-full h-48"><img src="https://www.csplane.com/media/djcatalog2/images/item/4/wipline-3900-straight-floats-8261_f.jpg" class="w-full h-full object-cover"/></div>
+                  <h3 class="mt-4 text-xl font-bold text-white">Cet objet mysterieux</h3>
+                </a>
+          
+
+              </div>
+          
+              <div class="mt-12 text-center">
+                <a class="inline-flex items-center px-8 py-3 mt-8 text-white bg-pink-600 border border-pink-600 rounded hover:bg-transparent active:text-pink-500 focus:outline-none focus:ring"
+                href="#" onclick="show()">
+                  <span class="text-sm font-medium">J'ai trouvé</span>
+                </a>
+              </div>
+              <div id="video"></div>
+            </div>
+          </section>
+
+          <script>
+            function show() {
+                if (confirm('Tu es sûr de toi?')) {
+                    document.getElementById('video').innerHTML = `
+                    <h2 class="text-xl font-bold p-6">Un tour d'hydravion!</h2>
+
+                    <iframe width="100%" height="500" src="https://www.youtube.com/embed/-rhmsbi93zo?start=55&amp;end=68&amp;autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    
+                    <p class="mt-4 text-gray-300">
+                        <h3 class="text-l font-bold p-6">Le deal inclus:</h3>
+                        <ul class="list-disc"><li>Un survol panoramique en hydravion du parc National de la Mauricie</li></ul>
+                        <ul class="list-disc"><li>Decollage et atterrissage depuis un lac</li></ul>
+                        <ul class="list-disc"><li>155km et 50 minutes de vol (75 minutes au total)</li></ul>
+                        <ul class="list-disc"><li>Un atterissage a mi-chemin sur un superbe lac de la réserve faunique, entourée de falaises, inacessible autrement</li></ul>
+                    </p>
+                    `
+                    document.getElementById('body').style = "height:100%";
+                    document.getElementById('section').style = "height:100%";
+                }
+            }
+
+          </script>
+        
+    </body>
+
+</html>
